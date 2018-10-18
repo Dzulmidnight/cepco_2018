@@ -5,9 +5,9 @@
     <head>
         <meta charset="utf-8">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+        <title>CEPCO - Admin Dashboard</title>
 
-        <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta name="description" content="CEPCO - Admin Dashboard">
         <meta name="author" content="pixelcave">
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
@@ -47,4 +47,4 @@
     </head>
     <body>
         <!-- Login Content -->
-        <div class="content overflow-hidden">
+        <div class="content overflow-hidden" style="max-width:1200px">

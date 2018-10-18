@@ -1,61 +1,171 @@
 <div class="row">
-    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-        <!-- Login Block -->
-        <div class="block block-themed animated fadeIn">
-            <div class="block-header bg-primary">
-                <ul class="block-options">
-                    <li>
-                        <a href="<?php echo base_url('login/index/recuperar_password'); ?>">Olvidaste tu contraseña?</a>
-                    </li>
-                    <!--<li>
-                        <a href="<?php echo base_url('login/index/registro'); ?>" data-toggle="tooltip" data-placement="left" title="New Account"><i class="si si-plus"></i></a>
-                    </li>-->
-                </ul>
-                <h3 class="block-title">Login</h3>
-            </div>
-            <div class="block-content block-content-full block-content-narrow">
-                <!-- Login Title -->
-                <h1 class="h2 font-w600 push-30-t push-5">CEPCO</h1>
-                <p>Bienvenido, por favor inicie sesión.</p>
-                <!-- END Login Title -->
+	<div class="col-md-12">
+		<h2 class="h2 text-center">MODULOS</h2>
+	</div>
+	<div class="col-md-12">
 
-                <!-- Login Form -->
-                <!-- jQuery Validation (.js-validation-login class is initialized in js/pages/base_pages_login.js) -->
-                <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                <?php echo form ?>
-                <form class="js-_open()validation-login form-horizontal push-30-t push-50" action="base_pages_dashboard.html" method="post">
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <div class="form-material form-material-primary floating">
-                                <input class="form-control" type="text" id="login-username" name="login-username">
-                                <label for="login-username">Usuario</label>
+
+                <!-- Page Content -->
+                <div class="content content-narrow">
+                    <!-- Icon Tiles -->
+                    <div class="content-grid push-50">
+                        <div class="row">
+                            <div id="organico" class="col-xs-6 col-sm-3 col-lg-6" onclick="modificar(this.id)">
+                                <a id="" class="block block-link-hover2 text-center" href="javascript:void(0)" >
+                                    <div class="block-content block-content-full bg-success">
+                                        <i class="si si-calculator fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Organico</div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <div class="form-material form-material-primary floating">
-                                <input class="form-control" type="password" id="login-password" name="login-password">
-                                <label for="login-password">Contraseña</label>
+                            <div class="col-xs-6 col-sm-6 col-lg-6">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-city">
+                                        <i class="si si-crop fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Administración</div>
+                                    </div>
+                                </a>
                             </div>
+                            <div class="col-xs-6 col-sm-6 col-lg-6">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-primary">
+                                        <i class="si si-shuffle fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Shuffle</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-lg-6">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-primary-dark">
+                                        <i class="si si-film fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Proyectos</div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+
+
+
+
+						<!--
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-music-tone fa-4x text-primary-darker"></i>
+                                        <div class="font-w600 push-15-t">Songs</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-trash fa-4x text-danger"></i>
+                                        <div class="font-w600 push-15-t">Trash</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-star fa-4x text-warning"></i>
+                                        <div class="font-w600 push-15-t">Ratings</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-bar-chart fa-4x text-success"></i>
+                                        <div class="font-w600 push-15-t">Sales</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-support fa-4x text-muted"></i>
+                                        <div class="font-w600 push-15-t">Support</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full">
+                                        <i class="si si-speedometer fa-4x text-danger"></i>
+                                        <div class="font-w600 push-15-t">Dashboard</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-primary">
+                                        <i class="si si-shuffle fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Shuffle</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-success">
+                                        <i class="si si-calculator fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Calc</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-primary-dark">
+                                        <i class="si si-film fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Movies</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-modern">
+                                        <i class="si si-crop fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Crop</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-amethyst">
+                                        <i class="si si-settings fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Settings</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-lg-2">
+                                <a class="block block-link-hover2 text-center" href="javascript:void(0)">
+                                    <div class="block-content block-content-full bg-city">
+                                        <i class="si si-game-controller fa-4x text-white"></i>
+                                        <div class="font-w600 text-white-op push-15-t">Games</div>
+                                    </div>
+                                </a>
+                            </div>
+                        -->
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <label class="css-input switch switch-sm switch-primary">
-                                <input type="checkbox" id="login-remember-me" name="login-remember-me"><span></span> Recordarme?
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <button class="btn btn-block btn-primary" type="submit"><i class="si si-login pull-right"></i> Ingresar</button>
-                        </div>
-                    </div>
-                </form>
-                <!-- END Login Form -->
-            </div>
-        </div>
-        <!-- END Login Block -->
-    </div>
+                    <!-- END Icon Tiles -->
+
+                </div>
+                <!-- END Page Content -->
+	</div>
+
 </div>
+
+
+<script>
+	function modificar(tipo){
+		var id = document.getElementById(tipo);
+		console.log(id);
+		//$(id).removeClass('col-lg-6');
+
+		id.classList.remove('col-lg-6');
+
+	}
+
+</script>
