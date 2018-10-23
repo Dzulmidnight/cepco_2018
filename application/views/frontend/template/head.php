@@ -45,6 +45,7 @@
         <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
         <!-- END Stylesheets -->
     </head>
+    <!--<body style="background-image: url('<?= base_url() ?>assets/img/login/login_background.jpg');background-size: cover;">-->
     <body>
         <!-- Login Content -->
         <div class="content overflow-hidden" style="max-width:1200px">
