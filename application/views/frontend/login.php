@@ -31,7 +31,7 @@
                                     )) ?>
                                         <div id="iniciarSesion">
                                             <div class="form-group">
-                                                <div class="col-xs-12">
+                                                <div class="col-md-12 col-sm-12">
                                                     <div class="form-material form-material-primary floating">
                                                         <input class="form-control" type="text" id="login-username" name="username">
                                                         <label for="login-username">Usuario</label>
@@ -39,7 +39,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <div class="col-xs-12">
+                                                <div class="col-md-12 col-sm-12">
                                                     <div class="form-material form-material-primary floating">
                                                         <input class="form-control" type="password" id="login-password" name="password">
                                                         <label for="login-password">Contraseña</label>
@@ -48,13 +48,13 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <div class="col-xs-8 col-sm-6 col-md-4">
+                                                <div class="col-md-8 col-sm-12">
                                                     <button class="sesion btn btn-block btn-primary" type="submit">
                                                         <i class="si si-login pull-right"></i> Ingresar
                                                     </button>
                                                 </div>
 
-                                                <div class="col-xs-4">
+                                                <div class="col-md-4 col-sm-12">
                                                     <ul class="block-options">
                                                         <li class="mostrar">
                                                             <a href="#" onclick="recuperarPassword('recuperar')">Olvidaste tu contraseña?</a>
@@ -92,7 +92,7 @@
                                         </div>
 
 
-                                        <input type="hidden" id="tipo_usuario" value="">
+                                        <input type="hidden" id="tipo_usuario" name="tipo_usuario" value="">
                                     </form>
                                     <!-- END Login Form -->
                                 </div>
@@ -103,35 +103,35 @@
                     <!-- visualización modulos -->
                     <div id="contenedor">
                         <div id="organico" class="col-xs-6" onclick="modificar(this.id)">
-                            <a id="" class="block block-link-hover3 text-center" href="javascript:void(0)" >
-                                <div class="block-content block-content-full">
-                                    <i class="si si-calculator fa-4x text-success"></i>
-                                    <div class="font-w600 text-success-op push-15-t">Organico</div>
+                            <a id="" class="block block-link-hover2 text-center" href="javascript:void(0)" >
+                                <div class="block-content block-content-full bg-success">
+                                    <i class="si si-calculator fa-4x text-white"></i>
+                                    <div class="font-w600 text-white push-15-t">Organico</div>
                                 </div>
                                 <div id="mostrar"></div>
                             </a>
                         </div>
                         <div id="administracion" class="col-xs-6" onclick="modificar(this.id)">
-                            <a class="block block-link-hover3 text-center" href="javascript:void(0)">
-                                <div class="block-content block-content-full bg-city">
+                            <a class="block block-link-hover3 text-center" style="color:#c0392b" href="javascript:void(0)">
+                                <div class="block-content block-content-full ">
                                     <i class="si si-crop fa-4x text-dange"></i>
-                                    <div class="font-w600 text-dange-op push-15-t">Administración</div>
+                                    <div class="font-w600 text-dange push-15-t" style="color:#c0392b">Administración</div>
                                 </div>
                             </a>
                         </div>
                         <div id="otro" class="col-xs-6" onclick="modificar(this.id)">
                             <a class="block block-link-hover2 text-center" href="javascript:void(0)">
-                                <div class="block-content block-content-full bg-primary">
-                                    <i class="si si-shuffle fa-4x text-white"></i>
-                                    <div class="font-w600 text-white-op push-15-t">Otro</div>
+                                <div class="block-content block-content-full">
+                                    <i class="si si-shuffle fa-4x text-white" style="color:#2c3e50"></i>
+                                    <div class="font-w600 push-15-t" style="color:#2c3e50">Otro</div>
                                 </div>
                             </a>
                         </div>
                         <div id="proyectos" class="col-xs-6" onclick="modificar(this.id)">
                             <a class="block block-link-hover3 text-center" href="javascript:void(0)">
-                                <div class="block-content block-content-full bg-primary-dark">
-                                    <i class="si si-film fa-4x text-primary"></i>
-                                    <div class="font-w600 text-primary-op push-15-t">Proyectos</div>
+                                <div class="block-content block-content-full bg-amethyst">
+                                    <i class="si si-film fa-4x text-white-op"></i>
+                                    <div class="font-w600 text-white-op push-15-t">Proyectos</div>
                                 </div>
                             </a>
                         </div>                            
@@ -160,7 +160,7 @@
                 colorSpan = '#5c90d2';
                 break;
             case 'proyectos':
-                colorSpan = '#3e4a59';
+                colorSpan = '#a48ad4';
                 break;
             case 'organico':
                 colorSpan = '#46c37b';
