@@ -66,7 +66,7 @@
                         <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-wrench"></i><span class="sidebar-mini-hide">Organizaciones</span></a>
                         <ul>
                             <li>
-                                <a href="start_backend.html">Link #1</a>
+                                <a href="<?php echo base_url(); ?>backend/mod_administracion/productores/productores/listado_general">Listado</a>
                             </li>
                             <li>
                                 <a href="start_backend.html">Link #2</a>
