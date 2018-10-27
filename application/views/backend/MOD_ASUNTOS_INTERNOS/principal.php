@@ -1,9 +1,14 @@
+<?php 
+	$ruta_general = 'backend/main';
+	$carpeta = $carpeta;
+ ?>
+
 <!-- Page Header -->
 <div class="content bg-gray-lighter">
     <div class="row items-push">
         <div class="col-sm-7">
             <h1 class="page-heading">
-                ADMINISTRACIÓN
+                ASUNTOS INTERNOS 
             </h1>
         </div>
         <div class="col-sm-5 text-right hidden-xs">
@@ -17,8 +22,12 @@
 <!-- END Page Header -->
 
 <div class="row">
+	<?php
+	$atributos = array('id' => 'listas_generales');
+	echo form_open('backend/main/sub_view', $atributos); 
+	?>
 	<div class="col-sm-6 col-lg-3">
-	    <a class="block block-bordered block-link-hover3" href="javascript:void(0)">
+	    <a name="opcion_seleccionada" class="block block-bordered block-link-hover3" href="#" onclick="enviar('listas_generales');">
 	        <table class="block-table text-center">
 	            <tbody>
 	                <tr>
@@ -35,10 +44,13 @@
 	            </tbody>
 	        </table>
 	    </a>
+	    <input type="hidden" name="sub_carpeta" value="organizaciones">
+	    <input type="hidden" name="archivo" value="listado_general">
+	    <input type="hidden" name="carpeta" value="<?= $carpeta ?>">
 	</div>
 
 	<div class="col-sm-6 col-lg-3">
-	    <a class="block block-bordered block-link-hover3" href="javascript:void(0)">
+	    <a class="block block-bordered block-link-hover3" href="<?php echo base_url(''.$ruta_general.'/sub_view/productores/listado_general'); ?>">
 	        <table class="block-table text-center">
 	            <tbody>
 	                <tr>
@@ -105,8 +117,7 @@
 </div>
 
 <!-- Page Content -->
-<div class="content">
-
+<div class="">
     <!-- My Block -->
     <div class="block">
         <div class="block-header">
@@ -127,7 +138,10 @@
                     <button type="button" data-toggle="block-option" data-action="close"><i class="si si-close"></i></button>
                 </li>
             </ul>
-            <h3 class="block-title">My Block</h3>
+            <h3 class="block-title">My Block carpeta: <?= $carpeta ?></h3>
+            <p>
+
+            </p>
         </div>
         <div class="block-content">
             <p>...</p>
@@ -136,3 +150,12 @@
     <!-- END My Block -->
 </div>
 <!-- END Page Content -->
+
+<script>
+	function enviar(id){
+		id.id;
+		console.log(id);
+		document.getElementById(id).submit();
+
+	}
+</script>

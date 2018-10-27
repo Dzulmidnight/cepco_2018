@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12" style="margin-bottom:10%">
-        <h1 class="font-w300 push text-center" style="color:#c0392b">CEPCO</h2>
+        <h1 class="push text-center" style="color:#c0392b;font-size:5em">CEPCO</h2>
     </div>
     <div class="col-md-12">
         <!-- Page Content -->
@@ -26,7 +26,7 @@
                                     <!-- Login Form -->
                                     <!-- jQuery Validation (.js-validation-login class is initialized in js/pages/base_pages_login.js) -->
                                     <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                    <?php echo form_open('backend/Main', array(
+                                    <?php echo form_open('backend/main/view', array(
                                         'class' => 'js_open()validation-login form-horizontal push-30-t push-50'
                                     )) ?>
                                         <div id="iniciarSesion">
@@ -92,7 +92,8 @@
                                         </div>
 
 
-                                        <input type="hidden" id="tipo_usuario" name="tipo_usuario" value="">
+                                        <input type="text" id="tipo_usuario" name="tipo_usuario" value="">
+                                        <input type="text" id="carpeta" name="carpeta" value="">
                                     </form>
                                     <!-- END Login Form -->
                                 </div>
@@ -101,29 +102,29 @@
 
                     </div>
                     <!-- visualización modulos -->
-                    <div id="contenedor">
-                        <div id="organico" class="col-xs-6" onclick="modificar(this.id)">
+                    <div class="col-lg-12" id="contenedor">
+                        <div id="ambiental" class="col-xs-6" onclick="modificar(this.id)">
                             <a id="" class="block block-link-hover2 text-center" href="javascript:void(0)" >
                                 <div class="block-content block-content-full bg-success">
                                     <i class="si si-calculator fa-4x text-white"></i>
-                                    <div class="font-w600 text-white push-15-t">Organico</div>
+                                    <div class="font-w600 text-white push-15-t">Ambiental</div>
                                 </div>
                                 <div id="mostrar"></div>
                             </a>
                         </div>
-                        <div id="administracion" class="col-xs-6" onclick="modificar(this.id)">
+                        <div id="asuntos_internos" class="col-xs-6" onclick="modificar(this.id)">
                             <a class="block block-link-hover3 text-center" style="color:#c0392b" href="javascript:void(0)">
                                 <div class="block-content block-content-full ">
                                     <i class="si si-crop fa-4x text-dange"></i>
-                                    <div class="font-w600 text-dange push-15-t" style="color:#c0392b">Administración</div>
+                                    <div class="font-w600 text-dange push-15-t" style="color:#c0392b">Asuntos internos</div>
                                 </div>
                             </a>
                         </div>
-                        <div id="otro" class="col-xs-6" onclick="modificar(this.id)">
+                        <div id="comercializacion" class="col-xs-6" onclick="modificar(this.id)">
                             <a class="block block-link-hover2 text-center" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
                                     <i class="si si-shuffle fa-4x text-white" style="color:#2c3e50"></i>
-                                    <div class="font-w600 push-15-t" style="color:#2c3e50">Otro</div>
+                                    <div class="font-w600 push-15-t" style="color:#2c3e50">Comercialización</div>
                                 </div>
                             </a>
                         </div>
@@ -134,7 +135,16 @@
                                     <div class="font-w600 text-white-op push-15-t">Proyectos</div>
                                 </div>
                             </a>
-                        </div>                            
+                        </div> 
+                        <div id="gestion_interna" class="col-xs-6" onclick="modificar(this.id)">
+                            <a class="block block-link-hover3 text-center" href="javascript:void(0)">
+                                <div class="block-content block-content-full bg-amethyst">
+                                    <i class="si si-film fa-4x text-white-op"></i>
+                                    <div class="font-w600 text-white-op push-15-t">Gestión interna</div>
+                                </div>
+                            </a>
+                        </div> 
+
                     </div>
 
                 </div>
@@ -159,20 +169,32 @@
             case 'otro':
                 colorSpan = '#5c90d2';
                 break;
-            case 'proyectos':
+            case 'asuntos_internos':
                 colorSpan = '#a48ad4';
                 break;
-            case 'organico':
+            case 'ambiental':
                 colorSpan = '#46c37b';
                 break;
+            case 'comercializacion':
+                colorSpan = '#46c37b';
+                break;
+            case 'gestion_interna':
+                colorSpan = '#46c37b';
+                break;
+
+
         }
 
 		id.classList.remove('col-lg-6');
         document.getElementById('login').style.display = 'block';
         id.style.display = 'none';
         document.getElementById('tipo_usuario').value = tipo;
+        document.getElementById('carpeta').value = tipo;
 
         nodos = document.getElementById('contenedor');
+        nodos.classList.remove('col-lg-12');
+        nodos.classList.add('col-lg-6');
+
         for (i = 0; i < nodos.children.length; i++) {
             elemento = nodos.children[i].id;
             if(elemento != tipo){
